@@ -10,10 +10,16 @@ for pid in $pids; do
     # Convert decimal PID to hexadecimal
     window_id=$(printf 0x"%x\n" $pid)
 
-    # Start clicking!
-    xdotool mousedown --window $window_id 3
-
-    # Stop looping
-    break
+    # Clicker Loop
+    while :
+    do
+    # Check if window is active, if so stop clicking
+      if [ "$(xdotool getwindowfocus)" -eq "$pid" ]; then
+        break 
+      fi
+      
+      xdotool click  --window $window_id 1
+      sleep 1
+    done
   fi
 done
