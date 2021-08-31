@@ -15,7 +15,7 @@ for pid in $pids; do
     do
     # Check if window is active, if so stop clicking
       if [ "$(xdotool getwindowfocus)" -eq "$pid" ]; then
-        break 
+        exit 0
       fi
       
       xdotool click  --window $window_id 1
