@@ -15,6 +15,7 @@ for pid in $pids; do
     do
     # Check if window is active, if so stop clicking
       if [ "$(xdotool getwindowfocus)" -eq "$pid" ]; then
+        echo "Minecraft window focused, Automatically exiting"
         exit 0
       fi
       
