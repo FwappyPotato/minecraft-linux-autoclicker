@@ -1,5 +1,5 @@
 # minecraft-linux-autoclicker
-Linux version of Minecraft autoclicker using bash 
+Linux version of Minecraft autoclicker using bash that runs in the background allowing you to use other applications
 
 Source: https://www.reddit.com/r/Minecraft/comments/bu4gka/linux_autoclicker_bash_script_useful_for_afk/
 
@@ -11,4 +11,4 @@ How to:
 2. Set `pauseOnLostFocus` to false in `~/.minecraft/options.txt` or open Minecraft and disable it in game (F3 + P).
 3. Launch Minecraft
 4. When you're ready, run the script.
-5. Stop by right clicking in Minecraft window.
+5. Stop by bringing Minecraft window into focus.
